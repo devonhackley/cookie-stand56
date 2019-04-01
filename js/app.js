@@ -24,7 +24,7 @@ const pike = {
 
     renderSales: function() {
 
-      }
+    }
 
 };
 const airport = {};
