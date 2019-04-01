@@ -23,7 +23,34 @@ const pike = {
     },
 
     renderSales: function() {
+        // calculate sales
+        this.calcCookiesSales();
 
+        //attaching store name
+        var h2 = document.createElement('h2');
+        h2.textContent = this.name;
+        var main = document.getElementById('main-area');
+        main.appendChild(h2);
+
+        //attaching li to list
+        var ul = document.createElement('ul');
+        hours.forEach((element, index) => {
+            var li = document.createElement('li');
+            li.textContent = element + ': ' + this.dailySales[index] + ' cookies';
+            ul.appendChild(li);
+        })
+
+        //attaching total sales to daily sales
+        var totalSales = 0;
+        this.dailySales.forEach((ele) => {
+            totalSales += ele;
+        })
+        var li = document.createElement('li');
+        li.textContent = 'Total Sales: ' + totalSales + ' cookies';
+        ul.appendChild(li);
+
+        //Append ul to the dom
+        main.appendChild(ul);
     }
 
 };
@@ -31,3 +58,6 @@ const airport = {};
 const center = {};
 const hill = {};
 const alki = {};
+
+// create pike store
+pike.renderSales();
