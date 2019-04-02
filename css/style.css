@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #DCC288;
+    overflow-x: hidden;
+    
+}
+
+header, footer {
+    position: relative;
+    margin: -1em;
+    color: white;
+    text-align: center;
+}
+
+#main-container {
+    background-image: url("../assets/river.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 500px;
+    padding-top: 30px;
+}
+
+header h2 {
+    font-size: 3em;
+    font-weight: 200;
+    font-family: 'Luckiest Guy', cursive;
+    color: #f5f2ef;
+}
+
+#salmon {
+  background-color:#6c6e7b7a;
+  width: 45%;
+  height: 260px;
+  padding: 1em;
+  margin: 0 auto 0 auto;
+  border-radius: 50%;
+  color: #172424;
+}
+
+#salmon img {
+    width: 50%;
+    height: 150px;
+    margin-top:-40px;
+}
