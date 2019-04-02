@@ -55,9 +55,6 @@ const pike = {
         //Append ul to the dom
         storeContainer.appendChild(ul);
 
-        // Append a line break
-        // const lb = document.createElement('br');
-        //main.appendChild(lb);
     }
 
 };
@@ -113,10 +110,6 @@ const airport = {
 
         //Append ul to the dom
         storeContainer.appendChild(ul);
-
-        // Append a line break
-        // const lb = document.createElement('br');
-        // main.appendChild(lb);
     }
 };
 const center = {
@@ -171,10 +164,6 @@ const center = {
 
         //Append ul to the dom
         storeContainer.appendChild(ul);
-
-        // // Append a line break
-        // const lb = document.createElement('br');
-        // main.appendChild(lb);
     }
 };
 const hill = {
@@ -229,10 +218,6 @@ const hill = {
 
         //Append ul to the dom
         storeContainer.appendChild(ul);
-
-        // // Append a line break
-        // const lb = document.createElement('br');
-        // main.appendChild(lb);
     }
 };
 const alki = {
@@ -287,10 +272,6 @@ const alki = {
 
         //Append ul to the dom
         storeContainer.appendChild(ul);
-
-        // Append a line break
-        // const lb = document.createElement('br');
-        // main.appendChild(lb);
     }
 };
 
