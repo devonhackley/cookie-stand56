@@ -61,3 +61,20 @@ header h2 {
     text-align: center;
     font-weight: 300;
 }
+
+table {
+    margin: 0 auto 0 auto;
+}
+
+th {
+    padding:5px;
+}
+
+td {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+tr > th {
+    color:rgba(44, 83, 128, 0.931);
+}

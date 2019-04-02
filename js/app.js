@@ -4,6 +4,14 @@ const hours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4
 const table = document.getElementById('table-area');
 const stores = [];
 
+/********** Helper Function to create elements *******************/
+const createTheElement = function(element, content, parent){
+    const newEle = document.createElement(element);
+    newEle.textContent = content;
+    parent.appendChild(newEle);
+};
+/*****************************************************************/
+
 const Store = function(name, minHourlyCust, maxHourlyCust, avgCookiePerSale){
     this.name = name;
     this.minHourlyCust = minHourlyCust;
@@ -36,15 +44,11 @@ Store.prototype.calcStoreTotals = function(){
 Store.prototype.createTableRow = function(){
     const tr = document.createElement('tr');
     const locationCell = document.createElement('td');
-    const th = document.createElement('th');
-    th.textContent = this.name;
     table.appendChild(tr);
-    tr.appendChild(th);
+    createTheElement('th', this.name, tr);
 
     this.dailySales.forEach((element) => {
-        let td = document.createElement('td');
-        td.textContent = element;
-        tr.appendChild(td);
+        createTheElement('td', element, tr);
     });
 
     // get location totals
@@ -61,24 +65,17 @@ Store.prototype.render = function(){
 };
 /***********************************************************************************************/
 
-
 // configure table
 const configureTable = function(){
     const tHead = document.createElement('thead');
     table.appendChild(tHead);
     const tr = document.createElement('tr');
     tHead.appendChild(tr);
-    const th = document.createElement('th');
-    th.textContent = '';
-    tr.appendChild(th);
+    createTheElement('th', '', tr);
     hours.forEach((ho) => {
-        let th = document.createElement('th');
-        th.textContent = ho;
-        tr.appendChild(th);
+        createTheElement('th', ho, tr);
     });
-    var th2 = document.createElement('th');
-    th2.textContent = 'Daily Location Total';
-    tr.appendChild(th2);
+    createTheElement('th', 'Daily Location Total', tr);
 };
 
 
@@ -93,21 +90,16 @@ const locationArray = [pike, airport, center,hill,alki];
 
 //function that creates the total cookie row
 var createTotalRow = function () {
-    let index = 0;
     const tr = document.createElement('tr');
     table.appendChild(tr);
-    const th = document.createElement('th');
-    th.textContent = 'Total: ';
-    tr.appendChild(th);
+    createTheElement('th', 'Total: ', tr);
     let hourlySales = 0;
     let totalHourlySales = 0;
     for (let i = 0; i < hours.length; i++) {
         for (var j = 0; j < locationArray.length; j++) {
             hourlySales += locationArray[j].dailySales[i];
         }
-        let td = document.createElement('td');
-        td.textContent = hourlySales;
-        tr.appendChild(td);
+        createTheElement('td', hourlySales, tr);
         hourlySales = 0;
     }
 
@@ -115,9 +107,7 @@ var createTotalRow = function () {
         totalHourlySales += location.locationTotals;
     });
     // add total for daily totals
-    const td = document.createElement('td');
-    td.textContent = totalHourlySales;
-    tr.appendChild(td);
+    createTheElement('td', totalHourlySales, tr);
 };
 
 
