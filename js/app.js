@@ -18,8 +18,8 @@ const pike = {
     // function that calculates the number of cookies per hour based on a random num
     calcCookiesSales: function (){
         this.dailySales = hours.map(() => {
-            return Math.floor(this.randomNumCustomer() * this.avgCookiePerSale)
-        })
+            return Math.floor(this.randomNumCustomer() * this.avgCookiePerSale);
+        });
     },
 
     renderSales: function() {
@@ -29,8 +29,10 @@ const pike = {
         //attaching store name
         const h2 = document.createElement('h2');
         h2.textContent = this.name;
+        const storeContainer = document.createElement('div');
         const main = document.getElementById('main-area');
-        main.appendChild(h2);
+        main.appendChild(storeContainer);
+        storeContainer.appendChild(h2);
 
         //attaching li to list
         const ul = document.createElement('ul');
@@ -38,23 +40,24 @@ const pike = {
             const li = document.createElement('li');
             li.textContent = element + ': ' + this.dailySales[index] + ' cookies';
             ul.appendChild(li);
-        })
+        });
 
         //attaching total sales to daily sales
         let totalSales = 0;
         this.dailySales.forEach((ele) => {
             totalSales += ele;
-        })
+        });
         const li = document.createElement('li');
         li.textContent = 'Total Sales: ' + totalSales + ' cookies';
         ul.appendChild(li);
+        storeContainer.className ='store';
 
         //Append ul to the dom
-        main.appendChild(ul);
+        storeContainer.appendChild(ul);
 
         // Append a line break
-        const lb = document.createElement('br');
-        main.appendChild(lb);
+        // const lb = document.createElement('br');
+        //main.appendChild(lb);
     }
 
 };
@@ -73,8 +76,8 @@ const airport = {
     // function that calculates the number of cookies per hour based on a random num
     calcCookiesSales: function (){
         this.dailySales = hours.map(() => {
-            return Math.floor(this.randomNumCustomer() * this.avgCookiePerSale)
-        })
+            return Math.floor(this.randomNumCustomer() * this.avgCookiePerSale);
+        });
     },
 
     renderSales: function() {
@@ -84,8 +87,10 @@ const airport = {
         //attaching store name
         const h2 = document.createElement('h2');
         h2.textContent = this.name;
+        const storeContainer = document.createElement('div');
         const main = document.getElementById('main-area');
-        main.appendChild(h2);
+        main.appendChild(storeContainer);
+        storeContainer.appendChild(h2);
 
         //attaching li to list
         const ul = document.createElement('ul');
@@ -93,23 +98,25 @@ const airport = {
             const li = document.createElement('li');
             li.textContent = element + ': ' + this.dailySales[index] + ' cookies';
             ul.appendChild(li);
-        })
+        });
 
         //attaching total sales to daily sales
         let totalSales = 0;
         this.dailySales.forEach((ele) => {
             totalSales += ele;
-        })
+        });
         const li = document.createElement('li');
         li.textContent = 'Total Sales: ' + totalSales + ' cookies';
         ul.appendChild(li);
 
+        storeContainer.className ='store';
+
         //Append ul to the dom
-        main.appendChild(ul);
+        storeContainer.appendChild(ul);
 
         // Append a line break
-        const lb = document.createElement('br');
-        main.appendChild(lb);
+        // const lb = document.createElement('br');
+        // main.appendChild(lb);
     }
 };
 const center = {
@@ -127,8 +134,8 @@ const center = {
     // function that calculates the number of cookies per hour based on a random num
     calcCookiesSales: function (){
         this.dailySales = hours.map(() => {
-            return Math.floor(this.randomNumCustomer() * this.avgCookiePerSale)
-        })
+            return Math.floor(this.randomNumCustomer() * this.avgCookiePerSale);
+        });
     },
 
     renderSales: function() {
@@ -138,8 +145,10 @@ const center = {
         //attaching store name
         const h2 = document.createElement('h2');
         h2.textContent = this.name;
+        const storeContainer = document.createElement('div');
         const main = document.getElementById('main-area');
-        main.appendChild(h2);
+        main.appendChild(storeContainer);
+        storeContainer.appendChild(h2);
 
         //attaching li to list
         const ul = document.createElement('ul');
@@ -147,7 +156,7 @@ const center = {
             const li = document.createElement('li');
             li.textContent = element + ': ' + this.dailySales[index] + ' cookies';
             ul.appendChild(li);
-        })
+        });
 
         //attaching total sales to daily sales
         let totalSales = 0;
@@ -158,12 +167,14 @@ const center = {
         li.textContent = 'Total Sales: ' + totalSales + ' cookies';
         ul.appendChild(li);
 
-        //Append ul to the dom
-        main.appendChild(ul);
+        storeContainer.className ='store';
 
-        // Append a line break
-        const lb = document.createElement('br');
-        main.appendChild(lb);
+        //Append ul to the dom
+        storeContainer.appendChild(ul);
+
+        // // Append a line break
+        // const lb = document.createElement('br');
+        // main.appendChild(lb);
     }
 };
 const hill = {
@@ -181,8 +192,8 @@ const hill = {
     // function that calculates the number of cookies per hour based on a random num
     calcCookiesSales: function (){
         this.dailySales = hours.map(() => {
-            return Math.floor(this.randomNumCustomer() * this.avgCookiePerSale)
-        })
+            return Math.floor(this.randomNumCustomer() * this.avgCookiePerSale);
+        });
     },
 
     renderSales: function() {
@@ -192,8 +203,10 @@ const hill = {
         //attaching store name
         const h2 = document.createElement('h2');
         h2.textContent = this.name;
+        const storeContainer = document.createElement('div');
         const main = document.getElementById('main-area');
-        main.appendChild(h2);
+        main.appendChild(storeContainer);
+        storeContainer.appendChild(h2);
 
         //attaching li to list
         const ul = document.createElement('ul');
@@ -201,23 +214,25 @@ const hill = {
             const li = document.createElement('li');
             li.textContent = element + ': ' + this.dailySales[index] + ' cookies';
             ul.appendChild(li);
-        })
+        });
 
         //attaching total sales to daily sales
         let totalSales = 0;
         this.dailySales.forEach((ele) => {
             totalSales += ele;
-        })
+        });
         const li = document.createElement('li');
         li.textContent = 'Total Sales: ' + totalSales + ' cookies';
         ul.appendChild(li);
 
-        //Append ul to the dom
-        main.appendChild(ul);
+        storeContainer.className ='store';
 
-        // Append a line break
-        const lb = document.createElement('br');
-        main.appendChild(lb);
+        //Append ul to the dom
+        storeContainer.appendChild(ul);
+
+        // // Append a line break
+        // const lb = document.createElement('br');
+        // main.appendChild(lb);
     }
 };
 const alki = {
@@ -235,8 +250,8 @@ const alki = {
     // function that calculates the number of cookies per hour based on a random num
     calcCookiesSales: function (){
         this.dailySales = hours.map(() => {
-            return Math.floor(this.randomNumCustomer() * this.avgCookiePerSale)
-        })
+            return Math.floor(this.randomNumCustomer() * this.avgCookiePerSale);
+        });
     },
 
     renderSales: function() {
@@ -246,8 +261,10 @@ const alki = {
         //attaching store name
         const h2 = document.createElement('h2');
         h2.textContent = this.name;
+        const storeContainer = document.createElement('div');
         const main = document.getElementById('main-area');
-        main.appendChild(h2);
+        main.appendChild(storeContainer);
+        storeContainer.appendChild(h2);
 
         //attaching li to list
         const ul = document.createElement('ul');
@@ -255,24 +272,25 @@ const alki = {
             const li = document.createElement('li');
             li.textContent = element + ': ' + this.dailySales[index] + ' cookies';
             ul.appendChild(li);
-        })
+        });
 
         //attaching total sales to daily sales
         let totalSales = 0;
         this.dailySales.forEach((ele) => {
             totalSales += ele;
-        })
+        });
         const li = document.createElement('li');
         li.textContent = 'Total Sales: ' + totalSales + ' cookies';
         ul.appendChild(li);
 
+        storeContainer.className ='store';
+
         //Append ul to the dom
-        main.appendChild(ul);
+        storeContainer.appendChild(ul);
 
         // Append a line break
-        const lb = document.createElement('br');
-        main.appendChild(lb);
-        
+        // const lb = document.createElement('br');
+        // main.appendChild(lb);
     }
 };
 

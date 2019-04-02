@@ -45,3 +45,19 @@ header h2 {
     height: 150px;
     margin-top:-40px;
 }
+
+/* Sales page */
+.store {
+    display: inline-block;
+    padding: 2em;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+.store h2 {
+    text-align: center
+}
+
+#sales-header {
+    text-align: center;
+    font-weight: 300;
+}
