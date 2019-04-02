@@ -162,7 +162,7 @@ const center = {
         let totalSales = 0;
         this.dailySales.forEach((ele) => {
             totalSales += ele;
-        })
+        });
         const li = document.createElement('li');
         li.textContent = 'Total Sales: ' + totalSales + ' cookies';
         ul.appendChild(li);
