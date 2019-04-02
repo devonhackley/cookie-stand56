@@ -1,6 +1,37 @@
 'use strict';
 
 const hours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm', '8pm'];
+const table = document.getElementById('table-area');
+
+const Store = function(name, minHourlyCust, maxHourlyCust, avgCookiePerSale){
+    this.name = name;
+    this.minHourlyCust = minHourlyCust;
+    this.maxHourlyCust = maxHourlyCust;
+    this.avgCookiePerSale = avgCookiePerSale;
+    this.dailySales = [];
+};
+// function that generates a random number of custormers
+Store.prototype.randomNumCustomer = function(){
+    return Math.round(Math.random() * (this.maxHourlyCust - this.minHourlyCust) + this.minHourlyCust);
+};
+// function that calculates the number of cookies per hour based on a random num
+Store.prototype.calcCookiesSales = function(){
+    this.dailySales = hours.map(() => {
+        return Math.floor(this.randomNumCustomer() * this.avgCookiePerSale);
+    });
+};
+
+Store.prototype.render = function(){
+    // calculate sales
+    this.calcCookiesSales();
+
+    // create row and row header add name
+    const tr = document.createElement('tr');
+    const th = document.createElement('th');
+
+    
+
+};
 
 // Avaliable stores
 const pike = {
@@ -276,8 +307,8 @@ const alki = {
 };
 
 // create stores
-pike.renderSales();
-airport.renderSales();
-center.renderSales();
-hill.renderSales();
-alki.renderSales();
+// pike.renderSales();
+// airport.renderSales();
+// center.renderSales();
+// hill.renderSales();
+// alki.renderSales();
