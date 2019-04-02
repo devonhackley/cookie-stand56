@@ -65,7 +65,7 @@ Store.prototype.render = function(){
 };
 /***********************************************************************************************/
 
-// configure table
+// configure table (header row)
 const configureTable = function(){
     const tHead = document.createElement('thead');
     table.appendChild(tHead);
@@ -88,7 +88,7 @@ const alki = new Store('Alki', 2, 16, 4.6);
 
 const locationArray = [pike, airport, center,hill,alki];
 
-//function that creates the total cookie row
+//function that creates the total cookie row (footer row)
 var createTotalRow = function () {
     const tr = document.createElement('tr');
     table.appendChild(tr);
