@@ -121,7 +121,17 @@ function handleFormSubmit(event){
     const avgSales = event.target.averageCookies.value;
 
     var newStore = new Store(name, minCustomer, maxCustomer, avgSales);
-    console.log(newStore);
+
+    // clear table and rebuild with new store
+    table.textContent = '';
+    stores.forEach((store)  => {
+        store.render();
+    });
+    //configure headers and create total row
+    configureTable();
+    createTotalRow();
+    // Reset forms
+    form.reset();
 }
 
 /**********************************************************************************/
