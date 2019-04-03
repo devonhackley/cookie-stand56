@@ -120,7 +120,8 @@ function handleFormSubmit(event){
     const maxCustomer = event.target.maxHourlyCustomers.value;
     const avgSales = event.target.averageCookies.value;
 
-    var newStore = new Store(name, minCustomer, maxCustomer, avgSales);
+    //create new store
+    new Store(name, minCustomer, maxCustomer, avgSales);
 
     // clear table and rebuild with new store
     table.textContent = '';
