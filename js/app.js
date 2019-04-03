@@ -2,6 +2,7 @@
 
 const hours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm', '8pm'];
 const table = document.getElementById('table-area');
+const form  = document.getElementById('cookie-form');
 const stores = [];
 
 /********** Helper Function to create elements *******************/
@@ -111,12 +112,27 @@ var createTotalRow = function () {
 };
 
 
+/************************* Form Event Handler **************************************/
+function handleFormSubmit(event){
+    event.preventDefault();
+    const name = event.target.name.value;
+    const minCustomer = event.target.minHourlyCustomers.value;
+    const maxCustomer = event.target.maxHourlyCustomers.value;
+    const avgSales = event.target.averageCookies.value;
+
+    var newStore = new Store(name, minCustomer, maxCustomer, avgSales);
+    console.log(newStore);
+}
+
+/**********************************************************************************/
 function renderTable() {
     stores.forEach((location) => {
         location.render();
     });
 }
 
+// add event listener
+form.addEventListener('submit', handleFormSubmit);
 
 // render table
 configureTable();
