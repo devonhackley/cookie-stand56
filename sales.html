@@ -10,7 +10,18 @@
 <body>
     <main>
         <h2 id="sales-header">Store Sales</h2>
-        <div id="main-area"></div>
+        <div id="main-area">
+            <form id="cookie-form">
+                <fieldset>
+                    <legend>Cookie Sales Form</legend>
+                    <input id="name" type = "text" name = "name" placeholder="Enter Store Name">
+                    <input id = "minHourlyCustomers" type = "number" name = "minHourlyCustomers" placeholder = "Enter Minimum Number of Hourly Customers">
+                    <input id = "maxHourlyCustomers" type = "number" name = "maxHourlyCustomers" placeholder = "Enter Maximum Number of Hourly Customers">
+                    <input id = "averageCookies" type = "number" name = "averageCookies" placeholder = "Enter Average Cookies Sales per Hour">
+                </fieldset>
+                <input type="submit" value="Get Results">
+            </form>
+        </div>
         <table id="table-area"></table>
     </main>
     <script type="text/javascript" src="./js/app.js"></script>
