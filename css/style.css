@@ -74,7 +74,9 @@ td {
     text-align: center;
     border: 1px solid black;
     border-radius: 3px;
+    background: rgb(250, 255, 178);
 }
 tr > th {
-    color:rgba(44, 83, 128, 0.931);
+    background: #7F595E;
+    color:rgba(251, 243, 229, 0.986);
 }
