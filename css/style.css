@@ -80,3 +80,7 @@ tr > th {
     background: #7F595E;
     color:rgba(251, 243, 229, 0.986);
 }
+
+label {
+    display:block;
+}
