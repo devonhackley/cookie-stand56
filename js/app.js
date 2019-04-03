@@ -80,13 +80,13 @@ const configureTable = function(){
 
 
 // create store instances
-const pike = new Store('1st and Pike', 23, 65, 6.3);
-const airport = new Store('SeaTac Airport', 3, 24, 1.2);
-const center = new Store('Seattle Center', 11, 38, 3.7);
-const hill = new Store('Capitol Hill', 20, 38, 2.3);
-const alki = new Store('Alki', 2, 16, 4.6);
+new Store('1st and Pike', 23, 65, 6.3);
+new Store('SeaTac Airport', 3, 24, 1.2);
+new Store('Seattle Center', 11, 38, 3.7);
+new Store('Capitol Hill', 20, 38, 2.3);
+new Store('Alki', 2, 16, 4.6);
 
-const locationArray = [pike, airport, center,hill,alki];
+//const locationArray = [pike, airport, center,hill,alki];
 
 //function that creates the total cookie row (footer row)
 var createTotalRow = function () {
@@ -96,14 +96,14 @@ var createTotalRow = function () {
     let hourlySales = 0;
     let totalHourlySales = 0;
     for (let i = 0; i < hours.length; i++) {
-        for (var j = 0; j < locationArray.length; j++) {
-            hourlySales += locationArray[j].dailySales[i];
+        for (var j = 0; j < stores.length; j++) {
+            hourlySales += stores[j].dailySales[i];
         }
         createTheElement('td', hourlySales, tr);
         hourlySales = 0;
     }
 
-    locationArray.forEach((location) => {
+    stores.forEach((location) => {
         totalHourlySales += location.locationTotals;
     });
     // add total for daily totals
