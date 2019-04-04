@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+@import url('https://fonts.googleapis.com/css?family=Knewave');
 body {
     padding: 0px;
     margin: 0px;
-    background-color: #DCC288;
     overflow-x: hidden;
     font-family: 'Luckiest Guy', cursive;
-    
+    background-color: #2a2b2f;
 }
 
 a {
@@ -21,7 +21,6 @@ header {
     margin-top: -2em;
     height: 200px;
     width: 100%;
-    background-color: #2a2b2f;
 }
 
 footer {
@@ -31,13 +30,42 @@ footer {
     text-align: center;
 }
 
-#main-container {
+#banner {
+    position: relative;
     background-image: url("../assets/river.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     width: 100%;
-    height: 500px;
-    padding-top: 30px;
+    height: 300px;
+}
+#banner h3 {
+    font-size: 45px;
+    font-weight: lighter;
+    font-family: 'Knewave', cursive;
+    color: #f5f2ef;
+    word-spacing: 10px;
+    position: absolute;
+    top: 20px;
+    left: 25%;
+}
+#banner .salmon-btn {
+    position: absolute;
+    top: 230px;
+    left: 45%;
+    padding: 1em;
+    font-size: 14px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.salmon-btn:focus {
+    outline: none;
+}
+.salmon-btn:hover {
+    background: rgb(240, 81, 81);
+    color:#fff;
+}
+
+#middle-container {
 }
 
 header h2 {
