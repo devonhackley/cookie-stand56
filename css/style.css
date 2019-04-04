@@ -84,3 +84,25 @@ tr > th {
 label {
     display:block;
 }
+
+#main-area {
+    position: relative;
+    margin: 0 auto 0 auto;
+    width: 25%;
+}
+#cookie-form {
+    border-radius: 10px;
+    background: #ccc;
+    padding: 2em;
+    margin-bottom: 1.5em;
+}
+#form-submit {
+    width:80px;
+    margin-top: 7px;
+    float:right;
+}
+.input-fields {
+    display: block;
+    padding: 5px;
+    width:150px;
+}

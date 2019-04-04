@@ -5,7 +5,7 @@ const table = document.getElementById('table-area');
 const form  = document.getElementById('cookie-form');
 const stores = [];
 
-/********** Helper Function to create elements *******************/
+/********** Helper Functions *******************/
 const createTheElement = function(element, content, parent){
     const newEle = document.createElement(element);
     newEle.textContent = content;
@@ -125,7 +125,7 @@ function handleFormSubmit(event){
 
     // clear table and rebuild with new store
     table.textContent = '';
-    stores.forEach((store)  => {
+    stores.forEach((store) => {
         store.render();
     });
     //configure headers and create total row
