@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
 @import url('https://fonts.googleapis.com/css?family=Knewave');
+@import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
+@import url('https://fonts.googleapis.com/css?family=Skranji:700');
 body {
     padding: 0px;
     margin: 0px;
     overflow-x: hidden;
     font-family: 'Luckiest Guy', cursive;
-    background-color: #2a2b2f;
+    background-color: #393a40;
 }
 
 a {
@@ -39,18 +41,20 @@ footer {
     height: 300px;
 }
 #banner h3 {
-    font-size: 45px;
+    letter-spacing: 5px;
+    font-size: 50px;
     font-weight: lighter;
-    font-family: 'Knewave', cursive;
-    color: #f5f2ef;
-    word-spacing: 10px;
+    /* font-family: 'Knewave', cursive; */
+    /* font-family: 'Racing Sans One', cursive; */
+    font-family: 'Skranji', cursive;
+    color: #f5f2eff2;
     position: absolute;
     top: 20px;
-    left: 25%;
+    left: 15%;
 }
 #banner .salmon-btn {
     position: absolute;
-    top: 210px;
+    top: 200px;
     left: 45%;
 }
 .salmon-btn {
@@ -95,11 +99,13 @@ footer {
     padding: 1em;
     margin: 15px 30px;
     background: #fff;
+    box-shadow: 5px 10px;
 }
 
 .middle-content h3 {
     width: 80px;
     font-size: 25px;
+    letter-spacing: 2px;
 }
 
 header h2 {
