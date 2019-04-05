@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+@import url('https://fonts.googleapis.com/css?family=Knewave');
 body {
     padding: 0px;
     margin: 0px;
-    background-color: #DCC288;
     overflow-x: hidden;
     font-family: 'Luckiest Guy', cursive;
-    
+    background-color: #2a2b2f;
 }
 
 a {
@@ -21,7 +21,6 @@ header {
     margin-top: -2em;
     height: 200px;
     width: 100%;
-    background-color: #2a2b2f;
 }
 
 footer {
@@ -31,13 +30,76 @@ footer {
     text-align: center;
 }
 
-#main-container {
+#banner {
+    position: relative;
     background-image: url("../assets/river.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     width: 100%;
+    height: 300px;
+}
+#banner h3 {
+    font-size: 45px;
+    font-weight: lighter;
+    font-family: 'Knewave', cursive;
+    color: #f5f2ef;
+    word-spacing: 10px;
+    position: absolute;
+    top: 20px;
+    left: 25%;
+}
+#banner .salmon-btn {
+    position: absolute;
+    top: 210px;
+    left: 45%;
+}
+.salmon-btn {
+    padding: 1em;
+    font-size: 14px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.salmon-btn:focus {
+    outline: none;
+}
+.salmon-btn:hover {
+    background: rgb(240, 81, 81);
+    color:#fff;
+}
+.middle-content .salmon-btn {
+    margin-left: 100px;
+}
+.middle-content img {
+    margin-bottom: 30px;
+    width: 100%;
+    height: 315px;
+    border: 1px solid #2a2b2f;
+    border-radius: 3px;
+}
+
+#middle-container {
+    width: 100%;
     height: 500px;
-    padding-top: 30px;
+    margin: -20px auto 50px;
+}
+#middle-content-containter {
+    position: relative;
+    width: 85%;
+    height: 520px;
+    margin: 80px auto 22px;
+}
+
+.middle-content {
+    float: left;
+    width: 310px;
+    padding: 1em;
+    margin: 15px 30px;
+    background: #fff;
+}
+
+.middle-content h3 {
+    width: 80px;
+    font-size: 25px;
 }
 
 header h2 {
