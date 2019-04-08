@@ -322,3 +322,15 @@ fieldset {
     width:150px;
     margin: 6px auto;
 }
+#sales-header {
+    font-size: 50px;
+    font-weight: 100;
+    color: #f5f2ef;
+    letter-spacing: 5px;
+}
+
+#sales-page {
+    background-image: url("../assets/chinook.png");
+    background-repeat: repeat;
+    background-position: center;
+}
